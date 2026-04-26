@@ -1,8 +1,8 @@
 {
   "name": "slides",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "engines": {
     "node": ">=22",
     "pnpm": ">=9"

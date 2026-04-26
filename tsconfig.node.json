@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "target": "ES2022",
+    "types": ["node"],
     "allowJs": true,
     "checkJs": false,
     "strict": true,
     "noEmit": true,
-    "skipLibCheck": true,
-    "types": ["node"]
+    "skipLibCheck": true
   },
   "include": ["scripts/**/*", "vite.config.*", "vitest.config.*", "landing/vite.config.ts", "landing/uno.config.ts"]
 }
