@@ -13,7 +13,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  plugins: [vue(), unocss()],
+  plugins: [
+    vue(),
+    unocss({ configFile: fileURLToPath(new URL('./uno.config.ts', import.meta.url)) }),
+  ],
   build: {
     outDir: '../dist',
     emptyOutDir: true,
