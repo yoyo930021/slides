@@ -11,7 +11,7 @@
     "dev": "node scripts/dev-talk.mjs",
     "dev:landing": "node scripts/dev-landing.mjs",
     "build": "node scripts/build-all.mjs",
-    "preview": "vite preview --root landing --outDir ../dist",
+    "preview": "vite preview landing --outDir ../dist",
     "scan": "node scripts/scan-talks.mjs",
     "typecheck": "vue-tsc --noEmit -p tsconfig.node.json && vue-tsc --noEmit -p landing/tsconfig.json",
     "lint": "eslint .",
