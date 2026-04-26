@@ -5,3 +5,4 @@ dist
 *.log
 *.generated.json
 landing/.vite
+.claude/
