@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-import { writeFile, mkdir } from 'node:fs/promises'
+import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import fg from 'fast-glob'
-import { parseTalk } from './lib/parse-talk.mjs'
 import { buildRegistry } from './lib/build-registry.mjs'
+import { parseTalk } from './lib/parse-talk.mjs'
 
 const ROOT = path.resolve(fileURLToPath(import.meta.url), '../..')
 const TALKS_GLOB = 'talks/*/slides.md'

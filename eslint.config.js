@@ -11,17 +11,6 @@ export default antfu({
     'landing/src/data/talks.generated.json',
     'docs/**',
     'pnpm-lock.yaml',
+    'talks/**',
   ],
-}, {
-  files: ['scripts/**/*.{mjs,js,ts}'],
-  rules: {
-    'node/prefer-global/process': 'off',
-    'perfectionist/sort-imports': 'off',
-    'perfectionist/sort-named-imports': 'off',
-  },
-}, {
-  files: ['talks/**/*.md'],
-  rules: {
-    'markdown/no-multiple-h1': 'off',
-  },
 })
