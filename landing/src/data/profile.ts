@@ -19,6 +19,6 @@ export const profile: Profile = {
   avatar: '',
   socials: [
     { type: 'github', label: 'GitHub', url: 'https://github.com/yoyo930021' },
-    { type: 'email', label: 'Email', url: 'mailto:space@yokikiyo.com' },
+    { type: 'email', label: 'Email', url: 'mailto:yoyo930021@gmail.com' },
   ],
 }
