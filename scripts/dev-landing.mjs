@@ -20,10 +20,14 @@ if (initial !== 0) {
   process.exit(initial)
 }
 
-const watcher = chokidar.watch('talks/*/slides.md', {
+const watcher = chokidar.watch('talks', {
   cwd: ROOT,
   ignoreInitial: true,
 })
+
+function isTalkSlides(file) {
+  return /^talks\/[^/]+\/slides\.md$/.test(file.replaceAll(path.sep, '/'))
+}
 
 let pending = false
 let running = false
@@ -41,7 +45,12 @@ async function debouncedScan() {
   }
 }
 
-watcher.on('add', debouncedScan).on('change', debouncedScan).on('unlink', debouncedScan)
+function onEvent(file) {
+  if (isTalkSlides(file))
+    debouncedScan()
+}
+
+watcher.on('add', onEvent).on('change', onEvent).on('unlink', onEvent)
 
 const vite = spawn('pnpm', ['exec', 'vite', 'landing'], { cwd: ROOT, stdio: 'inherit' })
 vite.on('exit', (code) => {
