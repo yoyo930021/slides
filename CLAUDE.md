@@ -25,14 +25,14 @@ The site is a fusion of two static builds glued together by a generated registry
 ```yaml
 title: <required>
 talk:
-  date: 2026-04-15      # required, ISO YYYY-MM-DD; quoted or unquoted both work
+  date: 2026-04-15 # required, ISO YYYY-MM-DD; quoted or unquoted both work
   event: <required>
   description: <required>
   location: <optional>
-  tags: [t1, t2]        # optional, default []
-  draft: false          # optional; true = skip from registry, build, and PDF
-  exportPdf: true       # optional; false = skip PDF export
-  slug: <optional>      # default: folder name
+  tags: [t1, t2] # optional, default []
+  draft: false # optional; true = skip from registry, build, and PDF
+  exportPdf: true # optional; false = skip PDF export
+  slug: <optional> # default: folder name
 ```
 
 `parse-talk.mjs` aggregates all validation errors before throwing — a single bad frontmatter prints every missing field at once.

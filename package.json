@@ -15,7 +15,8 @@
     "scan": "node scripts/scan-talks.mjs",
     "typecheck": "vue-tsc --noEmit -p tsconfig.node.json && vue-tsc --noEmit -p landing/tsconfig.json",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "node scripts/scan-talks.mjs"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^8.2.0",
