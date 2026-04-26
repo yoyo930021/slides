@@ -22,6 +22,11 @@ describe('parseTalk', () => {
     })
   })
 
+  it('accepts a YAML-quoted ISO date string and returns it as-is', async () => {
+    const result = await parseTalk(fix('quoted-date.md'), { folderSlug: 'q' })
+    expect(result.date).toBe('2026-04-15')
+  })
+
   it('uses talk.slug override when provided', async () => {
     const result = await parseTalk(fix('slug-override.md'), { folderSlug: 'ignored' })
     expect(result.slug).toBe('custom-slug')
